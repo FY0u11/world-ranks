@@ -18,18 +18,9 @@ const Home = ({ countries = [] }) => {
     // sorting
     useEffect(() => {
         const oldFilteredCountries = [...filteredCountries]
-        setFilteredCountries(oldFilteredCountries
-            .sort(
-                (a, b) => ~~a[sort.by] > ~~b[sort.by]
-                    ? sort.as
-                    : sort.as * -1
-            ))
-        countries
-            .sort(
-                (a, b) => ~~a[sort.by] > ~~b[sort.by]
-                    ? sort.as
-                    : sort.as * -1
-            )
+        const sortingFn = (a, b) => (a[sort.by] ?? 0) > (b[sort.by] ?? 0) ? sort.as : sort.as * -1
+        setFilteredCountries(oldFilteredCountries.sort(sortingFn))
+        filteredCountries.sort(sortingFn)
     }, [sort])
 
     // filtering
