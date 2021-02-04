@@ -7,7 +7,7 @@ import { useState } from 'react'
 const Layout = ({ children, title = 'World Ranks | Home' }) => {
     const [theme, setTheme] = useState('light')
 
-    const switchTheme = () => {
+    const switchThemeHandler = () => {
         if (theme === 'light') {
             setTheme('dark')
             document.documentElement.setAttribute('data-theme', 'dark')
@@ -21,6 +21,8 @@ const Layout = ({ children, title = 'World Ranks | Home' }) => {
         <div className={styles.container}>
             <Head>
                 <title>{title}</title>
+                <meta name="description" content="This web application was written using Next.js for the learning purposes" />
+                <meta name="keywords" content="nextjs, next.js, next, react, javaScript, typeScript, SSR" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
             </Head>
@@ -28,7 +30,7 @@ const Layout = ({ children, title = 'World Ranks | Home' }) => {
                 <Link href="/">
                     <div className={styles.logo} />
                 </Link>
-                <Brightness6Rounded className={styles.theme_switcher} onClick={switchTheme} />
+                <Brightness6Rounded className={styles.theme_switcher} onClick={switchThemeHandler} />
             </header>
             <main className={styles.main}>
                 {children}

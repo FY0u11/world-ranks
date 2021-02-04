@@ -3,56 +3,8 @@
     border-spacing: 0 26px;
 }
 
-.table tbody tr {
-    color: var(--text-color);
-    box-shadow: var(--box-shadow);
-    border-radius: 12px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-.table tbody tr:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--box-shadow-selected);
-}
-
-.table th {
-    padding: 0 26px;
-    text-align: start;
-    color: var(--text-color-primary);
-    font-weight: 500;
-    user-select: none;
-}
-
-.table td {
-    background: var(--background-color-light);
-    padding: 20px 26px;
-    display: table-cell;
-    cursor: pointer;
-    user-select: none;
-}
-
-.table td:last-child {
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
-
-.table td:first-child {
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-}
-
 .desktop {
     display: none;
-}
-
-.flag {
-    display: flex;
-}
-
-.flag > img {
-    width: 50px;
-    border-radius: 4px;
-    box-shadow: var(--box-shadow);
 }
 
 @media screen and (min-width: 768px) {

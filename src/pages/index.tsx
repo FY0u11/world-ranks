@@ -4,12 +4,16 @@ import TextInput from '../components/TextInput/TextInput'
 import CountryTable from '../components/CountryTable/CountryTable'
 import { useEffect, useState } from 'react'
 
-const Home = ({ countries }) => {
+const Home = ({ countries = [] }) => {
     const [filteredCountries, setFilteredCountries] = useState(countries)
     const [filter, setFilter] = useState('')
     const [sort, setSort] = useState({ by: 'name', as: 1 })
 
     const sortHandler = by => setSort({ by, as: sort.as * -1 })
+
+    useEffect(() => {
+        window.localStorage.setItem('countries', JSON.stringify(countries))
+    }, [countries])
 
     // sorting
     useEffect(() => {
@@ -50,18 +54,27 @@ const Home = ({ countries }) => {
                 </div>
                 <TextInput placeholder="Filter by name, region or subregion" setFilter={setFilter} />
             </div>
-            <CountryTable filteredCountries={filteredCountries} sortHandler={sortHandler} sort={sort} />
+            {
+                countries.length
+                    ? <CountryTable filteredCountries={filteredCountries} sortHandler={sortHandler} sort={sort} />
+                    : null
+            }
         </Layout>
     )
 }
 
 export async function getStaticProps () {
-    const response = await fetch('https://restcountries.eu/rest/v2/all')
-    const countries = await response.json()
-    return {
-        props: {
-            countries
+    try {
+        const response = await fetch('https://restcountries.eu/rest/v2/all?fields=name;population;gini;area;alpha3Code;flag;')
+        const countries = await response.json()
+        return {
+            props: {
+                countries
+            }
         }
+    } catch (e) {
+        console.log(e)
+        return { props: {} }
     }
 }
 
