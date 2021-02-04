@@ -13,20 +13,20 @@ const Home = ({ countries = [] }) => {
 
     useEffect(() => {
         window.localStorage.setItem('countries', JSON.stringify(countries))
-    }, [countries])
+    }, [])
 
     // sorting
     useEffect(() => {
         const oldFilteredCountries = [...filteredCountries]
         setFilteredCountries(oldFilteredCountries
             .sort(
-                (a, b) => a[sort.by] > b[sort.by]
+                (a, b) => ~~a[sort.by] > ~~b[sort.by]
                     ? sort.as
                     : sort.as * -1
             ))
         countries
             .sort(
-                (a, b) => a[sort.by] > b[sort.by]
+                (a, b) => ~~a[sort.by] > ~~b[sort.by]
                     ? sort.as
                     : sort.as * -1
             )
