@@ -1,0 +1,28 @@
+.country_count {
+    color: var(--text-color-secondary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.count_search {
+    display: flex;
+    flex-direction: column;
+}
+
+.accent {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    .count_search {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top:  2rem;
+        align-items: center;
+    }
+
+    .country_count {
+        margin-bottom: 0;
+    }
+}

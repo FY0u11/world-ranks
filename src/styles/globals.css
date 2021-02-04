@@ -1,0 +1,43 @@
+:root {
+    --text-color: #124a63;
+    --text-color-primary: #b9c9d1;
+    --text-color-secondary: #b3c5cd;
+    --primary-color: #21b6b7;
+    --background-color: #fafafa;
+    --background-color-dark: #eef3f6;
+    --country-card-name-color: #333;
+    --details-color: black;
+    --background-color-light: white;
+    --font-family: 'Poppins', sans-serif;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --box-shadow-selected: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --desktop: 899px;
+}
+
+[data-theme="dark"] {
+    --background-color: #252329;
+    --background-color-light: #3C393F;
+    --background-color-dark: #3C393F;
+    --country-card-name-color: white;
+    --text-color: white;
+    --details-color: white;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background: var(--background-color);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
