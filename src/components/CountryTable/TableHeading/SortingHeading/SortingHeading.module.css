@@ -1,9 +1,9 @@
 .wrapper {
-    display: flex;
-    cursor: pointer;
+  display: flex;
+  cursor: pointer;
 }
 
 .wrapper span:last-child {
-    margin-left: 10px;
-    color: var(--primary-color);
+  margin-left: 10px;
+  color: var(--primary-color);
 }

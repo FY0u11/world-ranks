@@ -1,18 +1,18 @@
 .table {
-    width: 100%;
-    border-spacing: 0 26px;
+  width: 100%;
+  border-spacing: 0 26px;
 }
 
 .desktop {
-    display: none;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
-    .mobile {
-        display: none;
-    }
+  .mobile {
+    display: none;
+  }
 
-    .desktop {
-        display: table-row;
-    }
+  .desktop {
+    display: table-row;
+  }
 }

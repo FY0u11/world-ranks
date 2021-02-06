@@ -1,39 +1,39 @@
 .flag {
-    display: flex;
+  display: flex;
 }
 
 .flag > img {
-    width: 50px;
-    border-radius: 4px;
-    box-shadow: var(--box-shadow);
+  width: 50px;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
 }
 
 .row {
-    color: var(--text-color);
-    box-shadow: var(--box-shadow);
-    border-radius: 12px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  color: var(--text-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .row:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--box-shadow-selected);
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-selected);
 }
 
 .row td {
-    background: var(--background-color-light);
-    padding: 20px 26px;
-    display: table-cell;
-    cursor: pointer;
-    user-select: none;
+  background: var(--background-color-light);
+  padding: 20px 26px;
+  display: table-cell;
+  cursor: pointer;
+  user-select: none;
 }
 
 .row td:last-child {
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .row td:first-child {
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 }

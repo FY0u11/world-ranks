@@ -1,45 +1,45 @@
 .wrapper {
-    background: var(--background-color-light);
-    border-radius: 12px;
-    padding: 25px 31px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: var(--background-color-light);
+  border-radius: 12px;
+  padding: 25px 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flag {
-    width: 100%;
-    max-width: 400px;
-    box-shadow: var(--box-shadow);
-    border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--box-shadow);
+  border-radius: 12px;
 }
 
 .country_name {
-    color: var(--country-card-name-color);
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 0;
-    text-align: center;
+  color: var(--country-card-name-color);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .region {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 .info {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
 .info_data {
-    color: var(--text-color);
-    font-weight: 500;
+  color: var(--text-color);
+  font-weight: 500;
 }
 
 .info_label {
-    margin-top: 8px;
-    color: var(--text-color-primary);
-    font-size: 14px;
+  margin-top: 8px;
+  color: var(--text-color-primary);
+  font-size: 14px;
 }

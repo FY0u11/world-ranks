@@ -1,7 +1,7 @@
 .row th {
-    padding: 0 26px;
-    text-align: start;
-    color: var(--text-color-primary);
-    font-weight: 500;
-    user-select: none;
+  padding: 0 26px;
+  text-align: start;
+  color: var(--text-color-primary);
+  font-weight: 500;
+  user-select: none;
 }

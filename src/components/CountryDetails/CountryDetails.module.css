@@ -1,15 +1,15 @@
 .wrapper {
-    background: var(--background-color-light);
-    border-radius: 12px;
-    padding: 25px 31px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  background: var(--background-color-light);
+  border-radius: 12px;
+  padding: 25px 31px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .heading {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 36px;
-    color: var(--details-color);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 36px;
+  color: var(--details-color);
 }

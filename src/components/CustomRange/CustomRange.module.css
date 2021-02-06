@@ -1,19 +1,19 @@
 .container {
-    display: flex;
-    align-items: center;
-    gap: 11px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
 
 .wrapper {
-    width: 133px;
-    height: 6px;
-    background-color: #f2f5f7;
-    border-radius: 12px;
+  width: 133px;
+  height: 6px;
+  background-color: #f2f5f7;
+  border-radius: 12px;
 }
 
 .inner {
-    width: 0;
-    height: 6px;
-    background-color: var(--primary-color);
-    border-radius: 12px;
+  width: 0;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 12px;
 }

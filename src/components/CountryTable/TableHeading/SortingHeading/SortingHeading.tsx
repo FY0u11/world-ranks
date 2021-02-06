@@ -1,24 +1,37 @@
-import { ExpandMore, ExpandLess } from '@material-ui/icons'
+import { ExpandLess, ExpandMore } from '@material-ui/icons'
+import { SortByType, SortType } from '../../../../types'
+
 import styles from './SortingHeading.module.css'
 
-const SortingHeading = ({ sortHandler, sort, children }) => {
-    return (
-        <div
-            className={styles.wrapper}
-            onClick={() => sortHandler(children.toLowerCase())}
-        >
-            <span>{children}</span>
-            <span>
-                {
-                    sort.by === children.toLowerCase()
-                        ? sort.as === 1
-                            ? <ExpandLess />
-                            : <ExpandMore />
-                        : ''
-                }
-            </span>
-        </div>
-    )
+interface ISortingHeadingProps {
+  sortHandler: (by: SortByType) => void
+  sort: SortType
+  sortBy: SortByType
+  children: string
+}
+
+const SortingHeading = ({
+  sortHandler,
+  sort,
+  sortBy,
+  children
+}: ISortingHeadingProps) => {
+  return (
+    <div className={styles.wrapper} onClick={() => sortHandler(sortBy)}>
+      <span>{children}</span>
+      <span>
+        {sort.by === sortBy ? (
+          sort.as === 1 ? (
+            <ExpandLess />
+          ) : (
+            <ExpandMore />
+          )
+        ) : (
+          ''
+        )}
+      </span>
+    </div>
+  )
 }
 
 export default SortingHeading
